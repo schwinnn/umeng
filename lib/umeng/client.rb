@@ -5,11 +5,11 @@ require 'umeng/send_message'
 
 module Umeng
   UMENG_HOST = 'http://msg.umeng.com'
-  
+
   class Client
     include Umeng::SendMessage
 
-    attr_accessor :appkey, :app_master_secretm, :plantform
+    attr_accessor :appkey, :app_master_secret, :plantform
 
     def initialize(appkey, app_master_secret, plantform)
       @plantform = plantform
