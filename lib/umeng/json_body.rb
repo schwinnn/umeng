@@ -3,10 +3,9 @@ module Umeng
     def android_params(opts={})
       {
         payload: {
-          display_type: 'message',
-          body: {
-            custom: opts[:key_value]
-          }
+          display_type: opts[:display_type],
+          body: opts[:body],
+          extra: opts[:key_value]
         }
       }
     end
@@ -14,11 +13,10 @@ module Umeng
     def ios_params(opts={})
       {
         payload: {
-          aps: {
-            alert: opts[:content]
-          }
+          aps: opts[:aps]
         }.merge(opts[:key_value])
       }
     end
   end
 end
+

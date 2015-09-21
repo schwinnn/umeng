@@ -6,6 +6,9 @@ module Umeng
     include Umeng::Services
     include Umeng::JsonBody
 
+    ## opts
+    ## {production_mode:'', display_type:'', body:{}, aps:{}, key_value:{}}
+
     # 广播
     def push_broadcast(opts={})
       params = {
